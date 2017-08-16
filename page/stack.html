@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>栈的应用</title>
+	</head>
+	<body>
+		<script>
+			function Stack(){
+				this.dataStore=[];
+				this.top = 0;
+				this.push = push;
+				this.pop = pop;
+				this.length = length; 
+			}
+			function push(element){
+				this.dataStore[this.top++] = element;
+			}
+			function pop(element){
+				return this.dataStore[--this.top];
+			}
+			function length(element){
+				return this.top;
+			}
+		</script>
+		<p>数值之间的转换：</p>
+		<span>将数字32转换问二进制：</span>
+		<span id="two"></span><br />
+		<span>将数字32转换为八进制：</span>
+		<span id="eight"></span>
+	</body>
+	<script src="../js/convert.js"></script>
+</html>
